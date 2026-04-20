@@ -21,6 +21,7 @@ export async function GET(req) {
     select: {
       id: true,
       name: true,
+      username: true,
       email: true,
       role: true,
       clientId: true,
@@ -48,15 +49,31 @@ export async function POST(req) {
 
   const hashed = await bcrypt.hash(password, 12);
 
+  // Auto-generate username from client slug
+  let username = null;
+  if (clientId) {
+    const client = await prisma.client.findUnique({ where: { id: clientId }, select: { slug: true } });
+    if (client?.slug) {
+      // Ensure unique: append suffix if slug already taken
+      const base = client.slug;
+      username = base;
+      let suffix = 1;
+      while (await prisma.user.findUnique({ where: { username } })) {
+        username = `${base}-${suffix++}`;
+      }
+    }
+  }
+
   const user = await prisma.user.create({
     data: {
       name: name || null,
+      username,
       email,
       password: hashed,
       role: role || "CLIENT",
       clientId: clientId || null,
     },
-    select: { id: true, name: true, email: true, role: true, clientId: true, createdAt: true },
+    select: { id: true, name: true, username: true, email: true, role: true, clientId: true, createdAt: true },
   });
   return NextResponse.json({ user }, { status: 201 });
 }

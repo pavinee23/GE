@@ -20,13 +20,33 @@ export async function PUT(req, { params }) {
   if (name !== undefined) data.name = name;
   if (email) data.email = email;
   if (role) data.role = role;
-  if (clientId !== undefined) data.clientId = clientId || null;
   if (password) data.password = await bcrypt.hash(password, 12);
+
+  // If clientId changes, update username from new client slug
+  if (clientId !== undefined) {
+    data.clientId = clientId || null;
+    if (clientId) {
+      const client = await prisma.client.findUnique({ where: { id: clientId }, select: { slug: true } });
+      if (client?.slug) {
+        const base = client.slug;
+        let username = base;
+        let suffix = 1;
+        while (true) {
+          const conflict = await prisma.user.findUnique({ where: { username } });
+          if (!conflict || conflict.id === id) break;
+          username = `${base}-${suffix++}`;
+        }
+        data.username = username;
+      }
+    } else {
+      data.username = null;
+    }
+  }
 
   const user = await prisma.user.update({
     where: { id },
     data,
-    select: { id: true, name: true, email: true, role: true, clientId: true, createdAt: true },
+    select: { id: true, name: true, username: true, email: true, role: true, clientId: true, createdAt: true },
   });
   return NextResponse.json({ user });
 }
