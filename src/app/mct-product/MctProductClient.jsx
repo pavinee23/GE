@@ -186,6 +186,11 @@ export default function MctProductClient({ session, companyName }) {
         </Link>
         <div className="d-flex align-items-center gap-3">
           <span className="small" style={{ color: "#8b8fa8" }}>{session?.user?.name || session?.user?.email}</span>
+          {session?.user?.role === "SUPER_ADMIN" && (
+            <Link href="/admin/clients" className="btn btn-sm" style={{ background: "#1e2336", color: "#a78bfa", border: "1px solid #3b2d5a" }}>
+              👥 จัดการลูกค้า
+            </Link>
+          )}
           <Link href="/m-group" target="_blank" className="btn btn-sm" style={{ background: "#1e2336", color: "#7eb8f7", border: "1px solid #2e3450" }}>
             🛒 ดูหน้าสินค้า
           </Link>

@@ -28,6 +28,16 @@ export default function LoginPage() {
 
     if (res?.error) {
       setError("อีเมลหรือรหัสผ่านไม่ถูกต้อง");
+      return;
+    }
+
+    // Redirect based on role
+    const sessionRes = await fetch("/api/auth/session");
+    const session = await sessionRes.json();
+    const role = session?.user?.role;
+
+    if (role === "SUPER_ADMIN" || role === "ADMIN") {
+      router.push("/admin/clients");
     } else {
       router.push("/mct-product");
     }
@@ -95,6 +105,12 @@ export default function LoginPage() {
           </button>
         </form>
 
+        <hr className="my-4" />
+        <div className="text-center">
+          <a href="/admin/login" className="text-muted small" style={{ textDecoration: "none" }}>
+            ⚙️ เข้าสู่ระบบสำหรับผู้ดูแลระบบ
+          </a>
+        </div>
 
       </div>
     </main>

@@ -13,6 +13,10 @@ const authConfig: NextAuthConfig = {
       const role = auth?.user?.role as string | undefined;
       const { pathname } = nextUrl;
 
+      // Public auth pages — always accessible
+      if (pathname === "/admin/login") return true;
+      if (pathname === "/auth/select") return true;
+
       if (pathname.startsWith("/admin")) {
         if (!isLoggedIn) return Response.redirect(new URL("/login", nextUrl));
         if (role !== "ADMIN" && role !== "SUPER_ADMIN")

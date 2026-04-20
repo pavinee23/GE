@@ -46,7 +46,7 @@ export default function Navbar({ ui, currentLanguage, setCurrentLanguage, query,
         <a href="#contact" className="agency-topbar-link">
           {ui.navContact}
         </a>
-        <Link href="/login" className="btn agency-btn-primary agency-topbar-cta">
+        <Link href="/auth/select" className="btn agency-btn-primary agency-topbar-cta">
           {ui.navLogin || "เข้าสู่ระบบ"}
         </Link>
       </div>
