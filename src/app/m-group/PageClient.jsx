@@ -12,11 +12,13 @@ const WARM  = "#FFF3E0";  // warm cream bg
 const CREAM = "#FFF7ED";  // orange-50 bg
 const WHITE = "#FFFFFF";
 
-const SITE_URL = "https://m-group.in.th";
-const PHONE    = "089-487-1144";
-const FAX      = "034-878369, 034-848022";
-const EMAIL    = "sale@m-group.in.th";
-const ADDRESS  = "58/9 ม.6 ซ.คลองมะเดื่อ 17/6 ต.คลองมะเดื่อ อ.กระทุ่มแบน จ.สมุทรสาคร 74110";
+const SITE_URL     = "https://m-group.in.th";
+const PHONE        = "089-487-1144";
+const FAX          = "034-878369, 034-848022";
+const EMAIL        = "sale@m-group.in.th";
+const ADDRESS      = "58/9 ม.6 ซ.คลองมะเดื่อ 17/6 ต.คลองมะเดื่อ อ.กระทุ่มแบน จ.สมุทรสาคร 74110";
+const MAP_URL      = "https://www.google.com/maps/search/?api=1&query=58%2F9+%E0%B8%A1.6+%E0%B8%8B.%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B8%B0%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD+17%2F6+%E0%B8%95.%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B8%B0%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD+%E0%B8%AD.%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B9%81%E0%B8%9A%E0%B8%99+%E0%B8%88.%E0%B8%AA%E0%B8%A1%E0%B8%B8%E0%B8%97%E0%B8%A3%E0%B8%AA%E0%B8%B2%E0%B8%84%E0%B8%A3+74110";
+const MAP_EMBED_URL = "https://maps.google.com/maps?q=58%2F9+%E0%B8%A1.6+%E0%B8%8B.%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B8%B0%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD+17%2F6+%E0%B8%95.%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B8%B0%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD+%E0%B8%AD.%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B9%81%E0%B8%9A%E0%B8%99+%E0%B8%88.%E0%B8%AA%E0%B8%A1%E0%B8%B8%E0%B8%97%E0%B8%A3%E0%B8%AA%E0%B8%B2%E0%B8%84%E0%B8%A3+74110&t=&z=16&ie=UTF8&iwloc=&output=embed";
 
 function injectStyle(id, css) {
   if (typeof document === "undefined") return;
@@ -103,6 +105,7 @@ const CONTENT = {
       { icon: "🧾", step: "04", title: "ออกบิล & ยืนยันออร์เดอร์", desc: "ระบบสร้างใบเสร็จ ใบกำกับภาษี และส่งยืนยันการสั่งซื้อให้ลูกค้าทันที" },
     ],
     aiCta: "ติดตามความคืบหน้า",
+    viewMap: "ดูแผนที่ Google Maps",
   },
   en: {
     navBrand: "M-Group",
@@ -179,6 +182,7 @@ const CONTENT = {
       { icon: "🧾", step: "04", title: "Invoice & Order Confirmation", desc: "System generates receipts and tax invoices, then sends order confirmation to the customer instantly." },
     ],
     aiCta: "Follow Our Progress",
+    viewMap: "View on Google Maps",
   },
   zh: {
     navBrand: "M-Group",
@@ -256,6 +260,7 @@ const CONTENT = {
       { icon: "🧾", step: "04", title: "开票与订单确认", desc: "系统自动生成收据和税务发票，并即时向客户发送订单确认。" },
     ],
     aiCta: "关注最新进展",
+    viewMap: "在 Google 地图上查看",
   },
 };
 
@@ -672,7 +677,21 @@ export default function PageClient() {
             background:`linear-gradient(90deg, ${OG}, ${AMBER})`,
             WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text",
           }}>{t.contactCompany}</p>
-          <p style={{ color:"#78350F", fontSize:".9rem", lineHeight:1.85, marginBottom:"1.5rem" }}>📍 {ADDRESS}</p>
+          <p style={{ color:"#78350F", fontSize:".9rem", lineHeight:1.85, marginBottom:".75rem" }}>📍 {ADDRESS}</p>
+          <a
+            href={MAP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display:"inline-flex", alignItems:"center", gap:5,
+              color:OG, fontWeight:700, fontSize:".82rem", textDecoration:"none",
+              border:`1px solid rgba(249,115,22,.4)`,
+              borderRadius:6, padding:"4px 14px", marginBottom:"1.5rem",
+              background:"rgba(249,115,22,.06)",
+            }}
+          >
+            🗺️ {t.viewMap} ↗
+          </a>
           <div style={{ display:"flex", gap:"1.2rem", justifyContent:"center", flexWrap:"wrap" }}>
             <a href={"tel:" + PHONE} style={{ color:OG_D, textDecoration:"none", fontWeight:700, display:"flex", alignItems:"center", gap:5 }}>📞 {PHONE}</a>
             <span style={{ color:"rgba(0,0,0,.15)" }}>|</span>
@@ -680,6 +699,24 @@ export default function PageClient() {
             <span style={{ color:"rgba(0,0,0,.15)" }}>|</span>
             <a href={"mailto:" + EMAIL} style={{ color:OG, textDecoration:"none", fontWeight:700, display:"flex", alignItems:"center", gap:5 }}>✉ {EMAIL}</a>
           </div>
+        </div>
+        <div style={{
+          borderRadius:16, overflow:"hidden",
+          border:"1px solid rgba(249,115,22,.2)",
+          boxShadow:"0 4px 20px rgba(249,115,22,.1)",
+          marginBottom:"2rem",
+          lineHeight:0,
+        }}>
+          <iframe
+            src={MAP_EMBED_URL}
+            width="100%"
+            height="340"
+            style={{ border:0, display:"block" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="M-Group Location"
+          />
         </div>
         <a href={SITE_URL} target="_blank" rel="noopener noreferrer" className="mg-btn" style={{
           display:"inline-block",
