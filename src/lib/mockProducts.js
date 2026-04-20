@@ -152,4 +152,212 @@ export const PRODUCTS = [
     desc: "ลวดผูกเหล็กอ่อน ชุบดำ ขนาด 18 เบอร์ ใช้ผูกเหล็กก่อสร้าง",
     img: null, stock: 800, rating: 4.2, sold: 970,
   },
+
+  // ── เพิ่มเติม จาก M-Group Facebook Page ──────────────────────────
+  {
+    id: 21, category: "agri", sku: "AG-007",
+    name: "ถาดเพาะกล้า 50 หลุม", nameEn: "50-Cell Seedling Tray", nameZh: "50孔育苗盘",
+    price: 35, priceWholesale: 25, unit: "ใบ", minOrder: 10, minWholesale: 100,
+    desc: "ถาดเพาะกล้าพลาสติก 50 หลุม ทนทาน ใช้ซ้ำได้ เหมาะสำหรับเพาะพืชผักและไม้ดอก",
+    img: "/m-group-products/1.png", stock: 500, rating: 4.4, sold: 380,
+  },
+  {
+    id: 22, category: "agri", sku: "AG-008",
+    name: "เครื่องพ่นยาไฟฟ้า 12V 16 ลิตร", nameEn: "12V Electric Sprayer 16L", nameZh: "12V电动喷雾器16升",
+    price: 1290, priceWholesale: 1050, unit: "เครื่อง", minOrder: 1, minWholesale: 5,
+    desc: "เครื่องพ่นยาไฟฟ้าสะพายหลัง 16 ลิตร ใช้แบตเตอรี่ 12V ปรับแรงดันได้ หัวพ่น 4 แบบ",
+    img: "/m-group-products/2.png", stock: 70, rating: 4.6, sold: 155,
+  },
+  {
+    id: 23, category: "agri", sku: "AG-009",
+    name: "ปั๊มหอยโข่ง 1 แรงม้า", nameEn: "Centrifugal Pump 1HP", nameZh: "1马力离心泵",
+    price: 1850, priceWholesale: 1600, unit: "เครื่อง", minOrder: 1, minWholesale: 3,
+    desc: "ปั๊มหอยโข่งมอเตอร์ 1 แรงม้า ดูดน้ำได้ลึก 8 เมตร อัตราการไหล 100 ลิตร/นาที",
+    img: "/m-group-products/4.png", stock: 40, rating: 4.5, sold: 88,
+  },
+  {
+    id: 24, category: "agri", sku: "AG-010",
+    name: "จอบด้ามไม้ เหล็กหล่อ", nameEn: "Iron Hoe with Wooden Handle", nameZh: "铸铁锄头木柄",
+    price: 185, priceWholesale: 145, unit: "เล่ม", minOrder: 1, minWholesale: 20,
+    desc: "จอบเหล็กหล่อคุณภาพสูง ด้ามไม้แข็งแรง เหมาะสำหรับขุดดิน พรวนดิน และปลูกพืช",
+    img: "/m-group-products/6.png", stock: 250, rating: 4.3, sold: 310,
+  },
+  {
+    id: 25, category: "agri", sku: "AG-011",
+    name: "รถไถเดินตาม 6 แรงม้า", nameEn: "6HP Power Tiller", nameZh: "6马力手扶拖拉机",
+    price: 28500, priceWholesale: 25000, unit: "เครื่อง", minOrder: 1, minWholesale: 1,
+    desc: "รถไถเดินตาม เครื่องยนต์ดีเซล 6 แรงม้า ไถ พรวน และสูบน้ำได้ น้ำหนักเบา ใช้งานง่าย",
+    img: "/m-group-products/7.png", stock: 12, rating: 4.8, sold: 34,
+  },
+  {
+    id: 26, category: "agri", sku: "AG-012",
+    name: "อาหารไก่ เนื้อ 30 กก.", nameEn: "Broiler Chicken Feed 30kg", nameZh: "肉鸡饲料30公斤",
+    price: 520, priceWholesale: 450, unit: "กระสอบ", minOrder: 1, minWholesale: 20,
+    desc: "อาหารไก่เนื้อ สูตรครบถ้วน โปรตีนสูง วิตามินและแร่ธาตุครบ เร่งการเจริญเติบโต",
+    img: "/m-group-products/5.png", stock: 200, rating: 4.5, sold: 420,
+  },
+  {
+    id: 27, category: "agri", sku: "AG-013",
+    name: "สายยางดำ PE 3/4 นิ้ว (100 เมตร)", nameEn: "PE Hose 3/4 inch 100m", nameZh: "3/4寸PE黑管100米",
+    price: 980, priceWholesale: 820, unit: "ม้วน", minOrder: 1, minWholesale: 5,
+    desc: "สายยางดำ PE ทนแดด ทนน้ำ ใช้สำหรับระบบน้ำหยดและสปริงเกลอร์ในสวนเกษตร",
+    img: null, stock: 150, rating: 4.4, sold: 265,
+  },
+
+  // ── ยาง ──────────────────────────────────────────────────────────
+  {
+    id: 28, category: "rubber", sku: "RB-004",
+    name: "อีทีฟอน 39% (Ethephon) 1 ลิตร", nameEn: "Ethephon 39% 1L", nameZh: "乙烯利39%溶液1升",
+    price: 280, priceWholesale: 230, unit: "ขวด", minOrder: 1, minWholesale: 24,
+    desc: "สารกระตุ้นน้ำยางพาราอีทีฟอน 39% ใช้ทาหน้ายาง เพิ่มผลผลิตน้ำยาง ได้รับการรับรอง",
+    img: "/m-group-products/9.png", stock: 200, rating: 4.7, sold: 480,
+  },
+  {
+    id: 29, category: "rubber", sku: "RB-005",
+    name: "กล่องใส่น้ำยาง 2 ลิตร (แพ็ค 50)", nameEn: "Latex Box 2L x50", nameZh: "2升乳胶盒50个装",
+    price: 290, priceWholesale: 230, unit: "แพ็ค", minOrder: 1, minWholesale: 10,
+    desc: "กล่องบรรจุน้ำยางพาราขนาด 2 ลิตร ทรงสี่เหลี่ยม มีฝาปิด สะอาด ปลอดภัย ส่งโรงงาน",
+    img: null, stock: 300, rating: 4.5, sold: 290,
+  },
+  {
+    id: 30, category: "rubber", sku: "RB-006",
+    name: "ถังน้ำยาง HDPE 20 ลิตร", nameEn: "HDPE Latex Tank 20L", nameZh: "HDPE乳胶桶20升",
+    price: 185, priceWholesale: 145, unit: "ใบ", minOrder: 1, minWholesale: 20,
+    desc: "ถังน้ำยาง HDPE 20 ลิตร ฝาเกลียว ทนทาน ไม่เป็นสนิม ใช้เก็บและขนส่งน้ำยางพารา",
+    img: null, stock: 400, rating: 4.6, sold: 340,
+  },
+  {
+    id: 31, category: "rubber", sku: "RB-007",
+    name: "เสาฉากยางพารา เหล็กชุบ (แพ็ค 10)", nameEn: "Rubber Tapping Stand x10", nameZh: "橡胶采集架10个",
+    price: 340, priceWholesale: 280, unit: "แพ็ค", minOrder: 1, minWholesale: 10,
+    desc: "เสาฉากสำหรับวางจอกรองน้ำยาง ทำจากเหล็กชุบกันสนิม แข็งแรง ติดตั้งง่าย",
+    img: "/m-group-products/8.png", stock: 180, rating: 4.4, sold: 210,
+  },
+
+  // ── เชือก & ประมง ─────────────────────────────────────────────────
+  {
+    id: 32, category: "fishing", sku: "FS-004",
+    name: "เชือก PE 3 เส้น 6 มม. (100 เมตร)", nameEn: "PE Rope 3-Strand 6mm 100m", nameZh: "PE三股绳6mm100米",
+    price: 560, priceWholesale: 460, unit: "ม้วน", minOrder: 1, minWholesale: 10,
+    desc: "เชือก PE 3 เส้น ขนาด 6 มม. ทนน้ำทะเล แรงดึง 500 กก. สีขาว ใช้ในงานประมงและเกษตร",
+    img: null, stock: 300, rating: 4.5, sold: 410,
+  },
+  {
+    id: 33, category: "fishing", sku: "FS-005",
+    name: "อวนล้อม ตา 1.5 นิ้ว ยาว 100 เมตร", nameEn: "Surrounding Net 1.5inch 100m", nameZh: "围网1.5寸100米",
+    price: 2200, priceWholesale: 1850, unit: "ม้วน", minOrder: 1, minWholesale: 3,
+    desc: "อวนล้อมไนล่อน ตาห่าง 1.5 นิ้ว ยาว 100 เมตร ลึก 3 เมตร ทนทาน ทนแดด UV",
+    img: "/m-group-products/10.png", stock: 60, rating: 4.6, sold: 85,
+  },
+  {
+    id: 34, category: "fishing", sku: "FS-006",
+    name: "ตะกั่วถ่วงน้ำหนัก 1 กก.", nameEn: "Fishing Lead Sinkers 1kg", nameZh: "渔铅坠1公斤",
+    price: 120, priceWholesale: 95, unit: "กก.", minOrder: 1, minWholesale: 20,
+    desc: "ตะกั่วถ่วงน้ำหนักสำหรับงานประมง หล่อจากตะกั่วบริสุทธิ์ หลากหลายขนาด",
+    img: null, stock: 250, rating: 4.3, sold: 320,
+  },
+  {
+    id: 35, category: "fishing", sku: "FS-007",
+    name: "เชือกกล้วย PP 3 มม. (200 เมตร)", nameEn: "PP Rope 3mm 200m", nameZh: "PP绳3mm200米",
+    price: 180, priceWholesale: 140, unit: "ม้วน", minOrder: 2, minWholesale: 30,
+    desc: "เชือกกล้วย PP สีเหลือง-ดำ ขนาด 3 มม. ยาว 200 เมตร เหนียว ทนทาน ราคาประหยัด",
+    img: null, stock: 600, rating: 4.4, sold: 780,
+  },
+
+  // ── ก่อสร้าง & ฮาร์ดแวร์ ─────────────────────────────────────────
+  {
+    id: 36, category: "construction", sku: "CS-004",
+    name: "รถเข็นมือ ล้อยาง 100 กก.", nameEn: "Wheelbarrow 100kg Rubber Wheel", nameZh: "橡胶轮手推车100公斤",
+    price: 1450, priceWholesale: 1200, unit: "คัน", minOrder: 1, minWholesale: 3,
+    desc: "รถเข็นมือ โครงเหล็กหนา ล้อยางเติมลม ความจุ 100 กก. เหมาะสำหรับงานก่อสร้างและเกษตร",
+    img: "/m-group-products/12.png", stock: 45, rating: 4.7, sold: 120,
+  },
+  {
+    id: 37, category: "construction", sku: "CS-005",
+    name: "สแลนกรองแสง 50% (1×50 เมตร)", nameEn: "50% Shade Cloth 1×50m", nameZh: "50%遮阳网1×50米",
+    price: 780, priceWholesale: 640, unit: "ม้วน", minOrder: 1, minWholesale: 10,
+    desc: "สแลนกรองแสง 50% สีเขียว ใยสังเคราะห์ HDPE กันแดด กันฝุ่น ใช้ในโรงเรือนและก่อสร้าง",
+    img: null, stock: 110, rating: 4.5, sold: 195,
+  },
+  {
+    id: 38, category: "construction", sku: "CS-006",
+    name: "ท่อ PVC ชั้น 8.5 ขนาด 4 นิ้ว (4 เมตร)", nameEn: "PVC Pipe Class 8.5 4inch 4m", nameZh: "4寸PVC管8.5级4米",
+    price: 320, priceWholesale: 260, unit: "ท่อน", minOrder: 1, minWholesale: 20,
+    desc: "ท่อ PVC ชั้น 8.5 ขนาด 4 นิ้ว ยาว 4 เมตร มอก.17-2532 ทนแรงดัน เหมาะงานระบบน้ำและก่อสร้าง",
+    img: null, stock: 80, rating: 4.3, sold: 145,
+  },
+  {
+    id: 39, category: "construction", sku: "CS-007",
+    name: "แผ่นโปลีคาร์บอเนต 4 มม. (1.22×2.44 เมตร)", nameEn: "Polycarbonate Sheet 4mm 1.22×2.44m", nameZh: "4mm聚碳酸酯板1.22×2.44米",
+    price: 1380, priceWholesale: 1150, unit: "แผ่น", minOrder: 1, minWholesale: 5,
+    desc: "แผ่นโปลีคาร์บอเนตใส 4 มม. กันกระแทก กันแดด UV ใช้ทำหลังคา โรงเรือน และหน้าต่าง",
+    img: null, stock: 55, rating: 4.6, sold: 98,
+  },
+
+  // ── Safety ────────────────────────────────────────────────────────
+  {
+    id: 40, category: "safety", sku: "SF-004",
+    name: "แว่นตานิรภัย กันสะเก็ด", nameEn: "Safety Goggles Anti-Splatter", nameZh: "防溅安全护目镜",
+    price: 65, priceWholesale: 48, unit: "อัน", minOrder: 5, minWholesale: 50,
+    desc: "แว่นตานิรภัยโพลีคาร์บอเนต กันสะเก็ด กันสารเคมี มาตรฐาน ANSI Z87.1",
+    img: "/m-group-products/11.png", stock: 500, rating: 4.5, sold: 680,
+  },
+  {
+    id: 41, category: "safety", sku: "SF-005",
+    name: "ชุด PPE กันสารเคมี (ชิ้น)", nameEn: "Chemical PPE Coverall", nameZh: "化学防护服",
+    price: 480, priceWholesale: 390, unit: "ชุด", minOrder: 1, minWholesale: 20,
+    desc: "ชุด PPE กันสารเคมีแบบทั้งตัว วัสดุโพลีโพรพีลีน กันไอระเหย กันสารเคมีกลุ่ม A-C",
+    img: null, stock: 150, rating: 4.4, sold: 240,
+  },
+  {
+    id: 42, category: "safety", sku: "SF-006",
+    name: "หน้ากากกรองฝุ่น N95 (กล่อง 20 ชิ้น)", nameEn: "N95 Dust Mask Box of 20", nameZh: "N95防尘口罩盒装20个",
+    price: 340, priceWholesale: 280, unit: "กล่อง", minOrder: 1, minWholesale: 10,
+    desc: "หน้ากากกรองฝุ่น N95 มาตรฐาน กรองฝุ่น PM2.5 เชื้อโรค และสารเคมีบางชนิด",
+    img: null, stock: 300, rating: 4.6, sold: 520,
+  },
+  {
+    id: 43, category: "safety", sku: "SF-007",
+    name: "เข็มขัดนิรภัย 2 จุด (Full Body Harness)", nameEn: "Full Body Harness 2-Point", nameZh: "全身安全带双挂点",
+    price: 890, priceWholesale: 720, unit: "ชุด", minOrder: 1, minWholesale: 10,
+    desc: "เข็มขัดนิรภัยแบบ Full Body รับน้ำหนักได้ถึง 140 กก. มาตรฐาน EN361 เหมาะงานสูง",
+    img: null, stock: 80, rating: 4.7, sold: 145,
+  },
+
+  // ── สินค้าเบ็ดเตล็ด ───────────────────────────────────────────────
+  {
+    id: 44, category: "misc", sku: "MC-003",
+    name: "กระทะอลูมิเนียม 36 ซม.", nameEn: "Aluminum Wok 36cm", nameZh: "36厘米铝锅",
+    price: 320, priceWholesale: 255, unit: "ใบ", minOrder: 1, minWholesale: 12,
+    desc: "กระทะอลูมิเนียมหล่อ ขนาด 36 ซม. ก้นหนา 4 มม. ให้ความร้อนสม่ำเสมอ น้ำหนักเบา",
+    img: "/m-group-products/14.png", stock: 180, rating: 4.4, sold: 260,
+  },
+  {
+    id: 45, category: "misc", sku: "MC-004",
+    name: "เครื่องชั่งแบบห้อย 50 กก.", nameEn: "Hanging Scale 50kg", nameZh: "50公斤吊秤",
+    price: 290, priceWholesale: 230, unit: "เครื่อง", minOrder: 1, minWholesale: 10,
+    desc: "เครื่องชั่งแบบห้อย สเกล 50 กก. อ่านค่าง่าย สปริงเหล็กกล้า เหมาะสำหรับชั่งสินค้าเกษตร",
+    img: "/m-group-products/16.png", stock: 120, rating: 4.3, sold: 190,
+  },
+  {
+    id: 46, category: "misc", sku: "MC-005",
+    name: "ธูปขาว 3 หุน (1 กล่อง)", nameEn: "White Incense Sticks 3 hua (1 box)", nameZh: "白香3分装（1盒）",
+    price: 85, priceWholesale: 65, unit: "กล่อง", minOrder: 1, minWholesale: 20,
+    desc: "ธูปขาวคุณภาพดี กลิ่นหอมอ่อน ไม่ฉุน ขนาด 3 หุน บรรจุกล่อง ใช้ไหว้บูชา",
+    img: "/m-group-products/18.png", stock: 400, rating: 4.5, sold: 580,
+  },
+  {
+    id: 47, category: "misc", sku: "MC-006",
+    name: "กล่องลัง ลูกฟูก 5 ชั้น (20×30×25 ซม.)", nameEn: "5-Layer Corrugated Box 20×30×25cm", nameZh: "5层瓦楞纸箱20×30×25厘米",
+    price: 28, priceWholesale: 20, unit: "ใบ", minOrder: 20, minWholesale: 200,
+    desc: "กล่องลังลูกฟูก 5 ชั้น ขนาด 20×30×25 ซม. แข็งแรง ทนน้ำหนัก เหมาะบรรจุสินค้าทั่วไป",
+    img: "/m-group-products/15.png", stock: 1000, rating: 4.2, sold: 1250,
+  },
+  {
+    id: 48, category: "misc", sku: "MC-007",
+    name: "ไฟสปอร์ตไลท์ LED 200W กันน้ำ", nameEn: "LED Floodlight 200W Waterproof", nameZh: "200W防水LED泛光灯",
+    price: 1650, priceWholesale: 1380, unit: "ดวง", minOrder: 1, minWholesale: 5,
+    desc: "ไฟสปอร์ตไลท์ LED 200W IP66 กันน้ำ กันฝุ่น แสงขาว 6500K ประหยัดไฟ ทนทาน",
+    img: "/m-group-products/13.png", stock: 75, rating: 4.7, sold: 165,
+  },
 ];

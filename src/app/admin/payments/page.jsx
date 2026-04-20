@@ -30,5 +30,14 @@ export default async function PaymentsPage() {
     initialError = "โหลดข้อมูลการชำระเงินไม่สำเร็จบางส่วน";
   }
 
-  return <PaymentsClient session={session} clients={clients} initialInvoices={invoices} initialError={initialError} />;
+  const serializedInvoices = invoices.map((inv) => ({
+    ...inv,
+    amount: inv.amount?.toString() ?? null,
+    dueDate: inv.dueDate?.toISOString() ?? null,
+    paidAt: inv.paidAt?.toISOString() ?? null,
+    createdAt: inv.createdAt?.toISOString() ?? null,
+    updatedAt: inv.updatedAt?.toISOString() ?? null,
+  }));
+
+  return <PaymentsClient session={session} clients={clients} initialInvoices={serializedInvoices} initialError={initialError} />;
 }
