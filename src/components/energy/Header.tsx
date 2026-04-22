@@ -279,14 +279,7 @@ export default function Header() {
             <RefreshCw className="w-5 h-5 text-gray-500 group-hover:text-orange-600 group-hover:rotate-180 transition-all duration-500" />
           </button>
 
-          {/* User Profile */}
-          <div className="flex items-center space-x-3 pl-4 border-l">
-            <div>
-              <p className="text-sm font-semibold text-gray-800">K Energy Save Co., Ltd.</p>
-              <p className="text-xs text-gray-600">info@kenergy-save.com</p>
-              <p className="text-xs text-primary font-medium">group of Zera</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </header>
